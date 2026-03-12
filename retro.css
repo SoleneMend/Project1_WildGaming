@@ -112,4 +112,50 @@ li {
     display: flex;
     justify-content: space-around;
 }
+/* navbar */
+nav {
+    height: 6rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo {
+    width: 30%;
+    margin: 1rem;
+}
+.cat {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1rem;
+}
+h1 {
+    text-align: center;
+    font-size: 3rem;
+}
+.navbar {
+    display: flex;
+    gap: 4rem;
+}
+.nav {
+    border: 0.1875rem;
+    border-radius: 1rem;
+    background: rgba(217, 217, 217, 35%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem;
+}
+.connexion {
+    width: 2.5rem;
+    height: 2.5rem;
+    margin: 1rem;
+    padding: 0.2rem;
+    background: rgba(217, 217, 217, 35%);
+     border-radius: 50%;
+}
+a {
+    text-decoration: none;
+    color: white;
+}
 }
