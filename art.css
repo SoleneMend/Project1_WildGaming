@@ -1,0 +1,22 @@
+:root {
+    --pink-color : #F72585;
+    --pink-purple-color : #B5179E;
+    --purple-color : #7209B7;
+    --dark-blue-color : #3A0CA3;
+    --medium-dark-blue-color : #3F37C9;
+    --medium-blue-color : #4895EF ;
+    --light-blue-color : #4CC9F0;
+
+    --background-color : linear-gradient( var(--pink-color), var(--pink-purple-color), var(--purple-color));
+    --titleBox-background-color : linear-gradient(var(var(--pink-color)), var(var(--light-blue-color)));
+
+    --text-color : white;
+
+
+}
+
+
+/*-- Style.css --*/
+body {
+    background-color: purple;
+}
