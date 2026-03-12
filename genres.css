@@ -15,7 +15,7 @@
 }
 
 nav {
-    background: linear-gradient(var(--primary-color), var(--segondary-color));
+    background: linear-gradient(165deg, var(--primary-color), var(--segondary-color));
 
     div {
         display: flex;
@@ -44,11 +44,14 @@ nav {
         padding: 32px;
 
         li {
-            background-color: rgb(255, 255, 255, 0.2);
+            background-color: rgb(255, 255, 255, 0.3);
             border-radius: 15px;
             display: flex;
-            font-size: 24px;
-            padding: 16px 48px 16px 48px;
+            font-size: 2rem;
+            height: 3rem;
+            width: 12rem;
+            justify-content: center;
+            align-items: center;
 
 
             a {
@@ -72,7 +75,7 @@ header {
 }
 
 main {
-    background: linear-gradient(var(--segondary-color), var(--third-color));
+    background: linear-gradient(165deg, var(--segondary-color), var(--third-color));
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -110,6 +113,7 @@ main {
             display: grid;
             width: 25vw;
             max-width: 480px;
+            height: 400px;
 
 
             img {
@@ -161,6 +165,7 @@ main {
             padding: 3rem;
 
             li {
+                list-style: none;
                 padding-bottom: 8px;
                 color: var(--sixth-color);
             }
@@ -173,6 +178,50 @@ main {
                     width: 1rem;
                 }
             }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    nav {
+        div {
+            flex-direction: column;
+
+        }
+
+        ul {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    main {
+        section {
+            display: flex;
+            flex-direction: column;
+
+            div {
+                width: 80vw;
+
+                img {
+                    width: 40vw;
+                }
+            }
+
+        }
+
+        aside {
+            display: flex;
+            flex-direction: column;
+
+            img {
+                width: 60vw;
+            }
+        }
+
+        article {
+            display: flex;
+            flex-direction: column;
         }
     }
 }
