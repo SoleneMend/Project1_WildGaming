@@ -5,6 +5,8 @@
     --fourth-color: #3a0ca3;
     --fifth-color: #3f34c9;
     --sixth-color: white;
+    --seventh-color: #4CC9F0;
+    --eighth-color: #4895EF;
 }
 
 * {
@@ -19,6 +21,8 @@ nav {
         display: flex;
         align-items: center;
         justify-content: center;
+        gap: 24px;
+        padding: 24px;
 
         img {
             width: 64px;
@@ -37,7 +41,7 @@ nav {
         align-items: center;
         justify-content: center;
         gap: 24px;
-        padding: 24px;
+        padding: 32px;
 
         li {
             background-color: rgb(255, 255, 255, 0.2);
@@ -72,6 +76,7 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-bottom: 42px;
 
     h2 {
         color: var(--sixth-color);
@@ -98,12 +103,14 @@ main {
         gap: 5vw;
 
         div {
+            padding: 1rem;
             border: 20px;
             border-radius: 15px;
-            background-color: rgb(255, 255, 255, 0.2);
+            background-color: rgb(255, 255, 255, 0.3);
             display: grid;
             width: 25vw;
             max-width: 480px;
+
 
             img {
                 border-radius: 15px;
@@ -118,12 +125,12 @@ main {
             }
 
             h3 {
-                color: var(--sixth-color);
+                color: var(--fourth-color);
                 padding: 12px 0 12px 0;
             }
 
             h5 {
-                color: var(--sixth-color);
+                color: var(--fifth-color);
                 padding: 12px 0 12px 0;
             }
         }
@@ -136,6 +143,7 @@ main {
         gap: 5vw;
 
         img {
+            border-radius: 15px;
             width: 25vw;
             max-width: 480px;
         }
@@ -144,22 +152,26 @@ main {
     article {
         border: 20px;
         border-radius: 15px;
-        background-color: rgb(255, 255, 255, 0.2);
+        background-color: rgb(255, 255, 255, 0.30);
         display: flex;
         justify-content: space-evenly;
         align-items: start;
-        width: 60vw;
-        max-width: 1152px;
 
         div {
+            padding: 3rem;
+
             li {
+                padding-bottom: 8px;
                 color: var(--sixth-color);
-                padding-bottom: 0px;
             }
 
             h3 {
-                color: var(--sixth-color);
-                padding: 12px 0 12px 0;
+                color: var(--fourth-color);
+                padding-bottom: 16px;
+
+                img {
+                    width: 1rem;
+                }
             }
         }
     }
