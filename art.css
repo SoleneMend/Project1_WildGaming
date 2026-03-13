@@ -7,16 +7,441 @@
     --medium-blue-color : #4895EF ;
     --light-blue-color : #4CC9F0;
 
-    --background-color : linear-gradient( var(--pink-color), var(--pink-purple-color), var(--purple-color));
-    --titleBox-background-color : linear-gradient(var(var(--pink-color)), var(var(--light-blue-color)));
+    --background-color : linear-gradient(165deg, var(--pink-color), var(--pink-purple-color), var(--purple-color));
+    --light-overlay-color : rgba(255,255,255,0.2);
+    --dark-overlay-color: rgba(0,0,0,0.2);
 
     --text-color : white;
-
-
 }
 
 
 /*-- Style.css --*/
 body {
-    background-color: purple;
+    margin: 0;
+    background: var(--background-color);
+    color : var(--text-color)
+}
+
+/*---------- Header ----------*/
+header {
+    width: 100%;
+    aspect-ratio: 1063 / 357;
+
+    background-image:url("images/art-titre.png");
+    background-size:cover;
+    background-position:center;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    h1 {
+        color: var(--text-color);
+        font-size: 10vh;
+    }
+}
+
+/*---------- Main ----------*/
+
+/*- Section Musique -*/
+
+.art-musique {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    .musique-description {
+        display: flex;
+        align-items: center;
+        
+        h2 {
+            background: var(--light-overlay-color);
+            border-radius: 10px;
+            border: 2px solid white;
+            padding : 5px;
+        }
+
+        .desc {
+            background: var(--light-overlay-color);
+            border: 2px solid white;
+            border-radius: 10px;
+            padding: 5px;
+        }
+
+        img {
+            width: 45vw;
+            height: auto;
+            border-radius: 20px;
+            
+            margin-right: 10vw;
+        }
+    }
+
+    .musique-presentation {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        background: var(--light-overlay-color);
+
+        h3 {
+            background: var(--light-overlay-color);
+            border-radius: 10px;
+            border: 2px solid white;
+            padding : 5px;
+        }
+
+        .desc {
+            background: var(--light-overlay-color);
+            border: 2px solid white;
+            border-radius: 10px;
+            padding: 5px;
+        }
+        
+        .recommandation {
+            font-weight: bold;
+            a {
+                color : var(--light-blue-color);
+                text-decoration: none;
+            }
+        }
+        
+        img {
+            height: 30vw;
+            width: auto;
+            border-radius: 20px;
+
+            margin-left: 10vw;
+            margin-right: 10vw;
+        }
+    }
+}
+
+
+/*- Media query -> section Musique -*/
+
+@media screen and (max-width: 768px) {
+    .art-musique {
+        margin-top: 5vh;
+
+        .musique-description {
+            flex-direction: column;
+
+            margin: 3vh;
+            margin-bottom: 10vh;
+
+            h2 {
+                width: 150px;
+
+                margin-top: 10vw;
+            }
+
+            img {
+                width: 75vw;
+            }
+        }
+        .musique-presentation {
+            flex-direction: column;
+            margin-bottom: 5vh;
+
+            .pres {
+                margin-left: 5vw;
+                margin-right: 5vw;
+            }
+
+            img {
+                height: 75vw;
+
+                margin-top: 5vw;
+                margin-left: 5vw;
+                margin-right: 5vw;
+            }
+
+            h3 {
+                width: 150px;
+            }
+        }
+    }
+
+}
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+    .art-musique {
+        margin-top: 10vh;
+
+        .musique-description {
+            flex-direction: row;
+
+            margin: 7vh;
+            margin-bottom: 10vh;
+
+            h2 {
+                font-size: 3vw;
+                width: 15vw;
+            }
+
+            img {
+                width: 35vw;
+                margin-right: 10vw;
+            }
+        }
+        .musique-presentation {
+            margin-bottom: 10vh;
+
+            .pres {
+                margin-left: 10vw;
+            }
+
+            h3 {
+                font-size: 2vw;
+                width: 15vw;
+            }
+        }
+    }
+
+}
+@media screen and (min-width: 1200px) {
+    .art-musique {
+        margin-top: 15vh;
+
+        .musique-description{
+            flex-direction: row;
+
+            margin: 10vh;
+            margin-bottom: 15vh;
+
+            h2 {
+                font-size: 3vw;
+                width: 15vw;
+            }
+
+            img {
+                width: 45vw;
+                margin-right: 10vw;
+            }
+        }
+        .musique-presentation{
+            margin-bottom: 15vh;
+
+            .pres {
+                margin-left: 10vw;
+            }
+
+            h3 {
+                font-size: 2vw;
+                width: 15vw;
+            }
+        }
+    }
+}
+
+
+/*- Section Dessin -*/
+
+.art-dessin {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    margin-top: 15vh;
+
+    .dessin-description {
+        display: flex;
+        align-items: center;
+
+        margin: 10vh;
+        margin-bottom: 15vh;
+        
+        h2 {
+            background: var(--light-overlay-color);
+            border-radius: 10px;
+            border: 2px solid white;
+            padding : 5px;
+            font-size: 3vw;
+            width: 15vw;
+        }
+
+        .desc {
+            background: var(--light-overlay-color);
+            border: 2px solid white;
+            border-radius: 10px;
+            padding: 5px;
+        }
+
+        img {
+            width: 45vw;
+            height: auto;
+            border-radius: 20px;
+            
+            margin-right: 10vw;
+        }
+    }
+
+    .dessin-presentation {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        margin-bottom: 25vh;
+
+        background: var(--light-overlay-color);
+
+        .pres {
+            margin-left: 10vw;
+        }
+
+        h3 {
+            background: var(--light-overlay-color);
+            border-radius: 10px;
+            border: 2px solid white;
+            padding : 5px;
+            font-size: 2vw;
+            width: 15vw;
+        }
+
+        .desc {
+            background: var(--light-overlay-color);
+            border: 2px solid white;
+            border-radius: 10px;
+            padding: 5px;
+        }
+        
+        .recommandation {
+            font-weight: bold;
+            a {
+                color : var(--light-blue-color);
+                text-decoration: none;
+            }
+        }
+        
+        img {
+            height: 30vw;
+            width: auto;
+            border-radius: 20px;
+
+            margin-left: 10vw;
+            margin-right: 10vw;
+        }
+    }
+}
+
+
+/*- Media query -> section Dessin -*/
+
+@media screen and (max-width: 768px) {
+    .art-dessin {
+        margin-top: 5vh;
+
+        .dessin-description {
+            flex-direction: column;
+
+            margin: 3vh;
+            margin-bottom: 10vh;
+
+            h2 {
+                width: 150px;
+
+                margin-top: 10vw;
+            }
+
+            img {
+                width: 75vw;
+            }
+        }
+
+        .dessin-presentation {
+            flex-direction: column;
+            margin-bottom: 5vh;
+
+            .pres {
+                margin-left: 5vw;
+                margin-right: 5vw;
+            }
+
+            img {
+                height: 75vw;
+
+                margin-top: 5vw;
+                margin-left: 5vw;
+                margin-right: 5vw;
+            }
+
+            h3 {
+                width: 150px;
+            }
+        }
+    }
+
+}
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+    .art-dessin {
+        margin-top: 10vh;
+
+        .dessin-description {
+            flex-direction: row;
+
+            margin: 7vh;
+            margin-bottom: 10vh;
+
+            h2 {
+                font-size: 3vw;
+                width: 15vw;
+            }
+
+            img {
+                width: 35vw;
+                margin-right: 10vw;
+            }
+        }
+
+        .dessin-presentation {
+            margin-bottom: 10vh;
+
+            .pres {
+                margin-left: 10vw;
+            }
+
+            h3 {
+                font-size: 2vw;
+                width: 15vw;
+            }
+        }
+    }
+
+}
+@media screen and (min-width: 1200px) {
+    .art-dessin {
+        margin-top: 15vh;
+
+        .dessin-description{
+            flex-direction: row;
+
+            margin: 10vh;
+            margin-bottom: 15vh;
+
+            h2 {
+                font-size: 3vw;
+                width: 15vw;
+            }
+
+            img {
+                width: 45vw;
+                margin-right: 10vw;
+            }
+        }
+
+        .dessin-presentation{
+            margin-bottom: 15vh;
+
+            .pres {
+                margin-left: 10vw;
+            }
+
+            h3 {
+                font-size: 2vw;
+                width: 15vw;
+            }
+        }
+    }
 }
