@@ -58,12 +58,13 @@
     display: flex;
     flex-direction: column;
     }
-    .title {
+    .titleRetro {
     padding-bottom: 1.5rem;
     text-align: center;
     font-size: var(--font-size-title);
     font-family: var(--font-family);
     font-weight: bold;
+    color: var(--font-color);
     }
     .description {
     padding-top: 1.5rem;
@@ -90,7 +91,7 @@
     font-family: var(--font-family);
     color: var(--font-color);
     }
-    li {
+    .liRetro {
     padding-left: 1rem;
     list-style: none;
     font-family: var(--font-family);
@@ -126,49 +127,9 @@
     justify-content: space-around;
     }
 }
-footer {
-        background: linear-gradient(165deg, var(--third-color), var(--fourth-color));
-        padding: 2rem;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
 
-        p {
-            color: var(--sixth-color);
-        }
 
-        img {
-            width: 4rem;
-        }
-
-        ul {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 1.5rem;
-            padding: 2rem;
-
-            li {
-                background-color: rgb(255, 255, 255, 0.3);
-                border-radius: 15px;
-                display: flex;
-                font-size: 1.5rem;
-                height: 3rem;
-                width: 12rem;
-                justify-content: center;
-                align-items: center;
-
-                a {
-                    text-decoration: none;
-                    color: var(--sixth-color);
-                }
-
-            }
-        }
-    }
-
-@media screen and (max-width: 810px) {
+/* @media screen and (max-width: 810px) {
    h1 {
     font-size: 2rem;
     padding-bottom: 1rem;
@@ -208,4 +169,4 @@ footer {
                 flex-direction: column;
         }
     }
-}
+} */

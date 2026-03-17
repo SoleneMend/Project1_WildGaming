@@ -1,10 +1,10 @@
-// Inject le CSS
-const link = document.createElement('link');
-link.rel = 'stylesheet';
-link.href = 'navBar.css';
-document.head.appendChild(link);
+// connecte le CSS
+const linkNavBar = document.createElement('link');
+linkNavBar.rel = 'stylesheet';
+linkNavBar.href = 'navBar.css';
+document.head.appendChild(linkNavBar);
 
-// Inject le HTML
+// place dans le HTML
 fetch('navBar.html')
     .then(function(response) {
         return response.text();
