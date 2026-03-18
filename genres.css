@@ -52,6 +52,10 @@
     animation: moveLight 2s linear forwards;
 }
 
+body {
+    background: linear-gradient(165deg, var(--segondary-color), var(--third-color));
+}
+
 nav {
     background: linear-gradient(var(--primary-color), var(--segondary-color));
 
@@ -105,7 +109,6 @@ nav {
 }
 
 header {
-    background-color: var(--segondary-color);
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -117,7 +120,6 @@ header {
 }
 
 main {
-    background: linear-gradient(165deg, var(--segondary-color), var(--third-color));
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -190,13 +192,12 @@ main {
 
         div {
             border-radius: 15px;
+        }
 
-
-            img {
-                border-radius: 15px;
-                width: 25vw;
-                max-width: 480px;
-            }
+        img {
+            border-radius: 15px;
+            width: 25vw;
+            max-width: 480px;
         }
     }
 
