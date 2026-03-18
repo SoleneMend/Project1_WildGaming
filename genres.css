@@ -18,6 +18,40 @@
     background-color: var(--eighth-color);
 }
 
+.divjs {
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.border-animation-svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 10;
+}
+
+.border-animation-svg rect {
+    fill: none;
+    stroke: var(--seventh-color);
+    stroke-width: 5px;
+    stroke-linecap: round;
+    filter: drop-shadow(0 0 3px var(--seventh-color)) drop-shadow(0 0 6px var(--seventh-color));
+
+    opacity: 0;
+
+    stroke-dasharray: var(--point-length) var(--total-length);
+    stroke-dashoffset: var(--total-length);
+}
+
+.border-animation-svg.active rect {
+    opacity: 1;
+    animation: moveLight 2s linear forwards;
+}
+
 nav {
     background: linear-gradient(var(--primary-color), var(--segondary-color));
 
@@ -154,10 +188,15 @@ main {
         justify-content: center;
         gap: 5vw;
 
-        img {
+        div {
             border-radius: 15px;
-            width: 25vw;
-            max-width: 480px;
+
+
+            img {
+                border-radius: 15px;
+                width: 25vw;
+                max-width: 480px;
+            }
         }
     }
 
@@ -171,6 +210,7 @@ main {
 
         div {
             padding: 3rem;
+            border-radius: 15px;
 
             li {
                 list-style: none;
@@ -190,45 +230,14 @@ main {
     }
 }
 
-footer {
-    background: linear-gradient(165deg, var(--third-color), var(--fourth-color));
-    padding: 2rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
 
-    p {
-        color: var(--sixth-color);
+@keyframes moveLight {
+    0% {
+        stroke-dashoffset: var(--total-length);
     }
 
-    img {
-        width: 64px;
-    }
-
-    ul {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 24px;
-        padding: 32px;
-
-        li {
-            background-color: rgb(255, 255, 255, 0.3);
-            border-radius: 15px;
-            display: flex;
-            font-size: 2rem;
-            height: 3rem;
-            width: 12rem;
-            justify-content: center;
-            align-items: center;
-
-            a {
-                text-decoration: none;
-                color: var(--sixth-color);
-            }
-
-        }
+    100% {
+        stroke-dashoffset: 0;
     }
 }
 
@@ -293,15 +302,15 @@ footer {
         }
 
         25% {
-            transform: translate(0px, 500%) rotate(90deg);
+            transform: translate(0px, 0px) rotate(90deg);
         }
 
         50% {
-            transform: translate(0px, 500%) rotate(0deg);
+            transform: translate(0px, 0px) rotate(0deg);
         }
 
         75% {
-            transform: translate(0px, 500%) rotate(90deg);
+            transform: translate(0px, 0px) rotate(90deg);
         }
 
         100% {
@@ -351,10 +360,5 @@ footer {
         }
     }
 
-    footer {
-        ul {
-            display: flex;
-            flex-direction: column;
-        }
-    }
+
 }
