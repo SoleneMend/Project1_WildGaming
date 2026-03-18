@@ -1,4 +1,4 @@
-const listUs = ["Laurent", "Solene", "Ulrich", "Hien", "Linda", "Samy"]
+const listUs = ["Laurent", "Solene", "Ulrich", "Hien"]
 
 const listMusicPresentation = 
 [

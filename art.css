@@ -185,6 +185,13 @@ header {
             margin-left: 10vw;
             margin-right: 10vw;
         }
+
+        button {
+            background: var(--light-overlay-color);
+            border: 2px solid var(--text-color) ;
+            color: var(--text-color);
+            border-radius: 10px;
+        }
     }
 }
 
@@ -231,6 +238,19 @@ header {
             h3 {
                 width: 150px;
             }
+
+            button {
+                height: 5vw;
+                width: 75vw;
+            }
+
+            .prevButton {
+                margin-bottom: 3vw;
+            }
+
+            .nextButton {
+                margin-top: 5vw;
+            }
         }
     }
 
@@ -266,6 +286,11 @@ header {
                 font-size: 2vw;
                 width: 15vw;
             }
+
+            button {
+                width: 10vw;
+                height: 25vw;
+            }
         }
     }
 
@@ -300,6 +325,11 @@ header {
             h3 {
                 font-size: 2vw;
                 width: 15vw;
+            }
+
+            button {
+                width: 10vw;
+                height: 25vw;
             }
         }
     }
@@ -349,6 +379,10 @@ header {
 
         margin-bottom: 15vh;
 
+        .pres {
+            margin-left: 5vw;
+        }
+
         h3 {
             background: var(--light-overlay-color);
             border-radius: 10px;
@@ -378,7 +412,14 @@ header {
             border-radius: 20px;
 
             margin-left: 10vw;
-            margin-right: 10vw;
+            margin-right: 5vw;
+        }
+
+        button {
+            background: var(--light-overlay-color);
+            border: 2px solid var(--text-color) ;
+            color: var(--text-color);
+            border-radius: 10px;
         }
     }
 }
@@ -411,7 +452,6 @@ header {
             flex-direction: column;
 
             .pres {
-                margin-left: 5vw;
                 margin-right: 5vw;
             }
 
@@ -425,6 +465,19 @@ header {
 
             h3 {
                 width: 150px;
+            }
+
+            button {
+                height: 5vw;
+                width: 75vw;
+            }
+
+            .prevButton {
+                margin-bottom: 3vw;
+            }
+
+            .nextButton {
+                margin-top: 5vw;
             }
         }
     }
@@ -452,13 +505,14 @@ header {
         }
 
         .dessin-presentation {
-            .pres {
-                margin-left: 10vw;
-            }
-
             h3 {
                 font-size: 2vw;
                 width: 15vw;
+            }
+
+            button {
+                width: 10vw;
+                height: 25vw;
             }
         }
     }
@@ -486,14 +540,14 @@ header {
         }
 
         .dessin-presentation{
-
-            .pres {
-                margin-left: 10vw;
-            }
-
             h3 {
                 font-size: 2vw;
                 width: 15vw;
+            }
+
+            button {
+                width: 10vw;
+                height: 25vw;
             }
         }
     }

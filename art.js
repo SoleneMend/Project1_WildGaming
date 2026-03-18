@@ -1,4 +1,4 @@
-const listOfUs = ["Laurent", "Solene", "Ulrich", "Hien", "Linda", "Samy"]
+const listOfUs = ["Laurent", "Solene", "Ulrich", "Hien"]
 
 const listArtPresentation = 
 [
