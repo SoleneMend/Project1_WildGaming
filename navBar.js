@@ -23,7 +23,7 @@ document.getElementById('navbar').innerHTML =
                         <li class="submenuList"><a class="navList" href="pegi.html">Les normes PEGI</a></li>
                         <li class="submenuList"><a class="navList" href="retro.html">Le rétro-gaming</a></li>
                         <li class="submenuList"><a class="navList" href="art.html">L'art dans les jeux</a></li>
-                        <li class="submenuList"><a class="navList" href="#">Les technologies</a></li>
+                        <li class="submenuList"><a class="navList" href="lesévolutionsdesconsoles.html">Les technologies</a></li>
                     </ul>
                 </li>
                 <li class="dropdown-categorie"><a class="dropdown-accueil" id="reco" href="#recommandations">Nos recommandations</a>
