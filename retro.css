@@ -237,6 +237,7 @@ body {
         position: relative;
         top: -36rem;
         flex-direction: column;
+        height: 45rem;
     }
     .retconsole {
         flex-direction: column-reverse;
@@ -258,6 +259,9 @@ body {
     }
     .imagePop {
         width: 95%;
+    }
+    .arcade {
+        width: 15rem;
     }
 }
 
