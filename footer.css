@@ -16,7 +16,7 @@
     --border-radius-img: 5.5rem;
     --height-ban: 59rem;
     --background-navbar: rgba(0, 0, 0, 0.3)
- }
+}
 
 * {
     margin: 0;
@@ -30,6 +30,7 @@
     padding-block: 3rem;
     color: var(--text-color);
 }
+
 .footerContainer {
     width: 80%;
     margin-inline: auto;
@@ -41,12 +42,14 @@
     gap: 2rem;
     margin-bottom: 2rem;
 }
+
 .footer-icone {
     color: var(--background-color-1);
     margin-right: 7px;
     position: relative;
     top: 5px;
 }
+
 .footer-title {
     font-size: 20px;
     margin-bottom: 16px;
@@ -54,18 +57,21 @@
     font-family: var(--font-family-title);
 }
 
-.footer-p, .footer-ul {
+.footer-p,
+.footer-ul {
     color: var(--text-color);
     font-family: var(--font-family);
     font-size: 14px;
     line-height: 1.8;
     list-style: none;
 }
+
 .newsletter-form {
     display: flex;
     gap: 8px;
     margin-top: 12px;
 }
+
 .newsletter input {
     flex: 1;
     padding: 8px 12px;
@@ -75,36 +81,50 @@
     color: white;
     font-size: 14px;
 }
+
 .newsletter input::placeholder {
     color: rgba(255, 255, 255, 0.5);
 }
+
 .newsletter input:focus {
     outline: none;
     border-color: var(--background-color-1)
 }
+
 .footer-btn-carrier {
     padding: 8px 16px;
     font-size: 14px;
     border-radius: 2rem;
-    background: linear-gradient(90deg, var(--background-color-1),var(--background-color-2),var(--background-color-3));
+    background: linear-gradient(90deg, var(--background-color-1), var(--background-color-2), var(--background-color-3));
     color: var(--text-color);
     font-weight: bold;
 }
+
 .footer-btn {
     padding: 8px 16px;
     font-size: 14px;
     border-radius: 0.5rem;
-    background: linear-gradient(90deg, var(--background-color-1),var(--background-color-2),var(--background-color-3));
+    background: linear-gradient(90deg, var(--background-color-1), var(--background-color-2), var(--background-color-3));
     color: var(--text-color);
     font-weight: bold;
 }
-.footer-btn-carrier:hover, .footer-btn:hover {
+
+.footer-btn-carrier:hover,
+.footer-btn:hover {
     box-shadow: 0 0.1rem 1rem var(--background-color-1, 0.3);
 }
+
 .footer-bottom {
     padding-top: 32px;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     text-align: center;
     color: rgba(255, 255, 255, 0.5);
     font-size: 14px;
+}
+
+@media screen and (max-width: 768px) {
+    .footer-grid {
+        display: flex;
+        flex-direction: column;
+    }
 }

@@ -1,0 +1,165 @@
+:root {
+        --background-color-1: #b5179e;
+        --background-color-2: #7209b7;
+        --background-color-3: #3a0ca3;
+        --background-article: rgba(217, 217, 217, 35%);
+        --background-accueil: rgba(217, 217, 217, 35%);
+        --border-list: white;
+        --font-family: Arial, Helvetica, sans-serif;
+        --text-color: white;
+        --text-list-color: black;
+        --font-size-title: 2rem;
+        --size-article: 35rem;
+        --border-radius-img: 5.5rem;
+        --height-ban: 59rem;
+        --background-navbar: rgba(0, 0, 0, 0.3)
+    }
+
+/* navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    border-bottom: 1px solid var(--background-article);
+    font-family:var(--font-family);
+}
+.navbar::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: var(--background-navbar);
+    backdrop-filter: blur(10px);
+    z-index: -1;
+}
+.nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2rem;
+    height: 64px;
+    margin: 0;
+}
+.nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    list-style: none;
+}
+.nav-logoImg {
+    width: 4rem;
+}
+.navTitle {
+    font-family: var(--font-family);
+    font-size: var(--font-size-title);
+    font-weight: 700;
+    color: var(--text-color);
+    padding-bottom: 0;
+}
+
+/* Menu deroulant de l'accueil  */
+.dropdown {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 4px;
+}
+.dropdown-categorie {
+    position: relative;
+}
+.dropdown-accueil {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 10px 16px;
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 8px;
+}
+.dropdown-accueil:hover {
+    background: var(--background-accueil);
+}
+
+/* Menu deroulant - Les listes  */
+.submenu {
+    opacity: 0;
+    position: absolute;
+    top: 100%;
+    transform: translateX(0%);
+    background: var(--background-navbar);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--border-list);
+    border-radius: 12px;
+    padding: 0.5rem;
+    list-style: none;
+    margin: 0;
+    min-width: 11.5rem;
+    box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.5);
+    z-index: 200;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+/* apparition de la liste  */
+.dropdown-categorie:hover .submenu, .dropdown-categorie:focus-within .submenu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+.dropdown .submenu {
+    transition: all 1s ease;
+}
+
+/* les listes  */
+.submenuList {
+    list-style: none;
+}
+.navList {
+    display: block;
+    padding: 9px 14px;
+    color: var(--text-color);
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 0.8rem;
+    border-radius: 0.5rem;
+    transition: 0.15s ease;
+}
+.navList:hover {
+    background: var(--background-article);
+}
+
+/* icone de connexion */
+
+.navConnexion {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    border: 3px solid var(--background-accueil);
+    transition: 0.15s ease;
+    color: var(--text-color)
+}
+.navConnexion:hover {
+    background: var(--background-color-1);
+}
+
+@media screen and (max-width: 768px){
+    .nav-container{
+        padding: 0.5rem;
+    }
+    .navTitle {
+        display: none;
+    }
+    .submenu {
+        min-width: 10rem;
+    }
+
+
+
+
+
+}
