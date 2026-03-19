@@ -1,67 +1,117 @@
- :root {
-     --primary-color: #f72585;
-     --segondary-color: #b5179e;
-     --third-color: #7209B7;
-     --fourth-color: #3a0ca3;
-     --fifth-color: #3f34c9;
-     --sixth-color: white;
-     --seventh-color: #4CC9F0;
-     --eighth-color: #4895EF;
+:root {
+    --background-color-1: #b5179e;
+    --background-color-2: #7209b7;
+    --background-color-3: #3a0ca3;
+    --background-color-4: #3f37c9;
+    --background-color-5: #4895ef;
+    --background-article: rgba(217, 217, 217, 35%);
+    --background-accueil: rgba(217, 217, 217, 35%);
+    --border-list: white;
+    --font-family-title: Arial, Helvetica, sans-serif;
+    --font-family: Arial, Helvetica, sans-serif;
+    --text-color: white;
+    --text-list-color: black;
+    --font-size-title: 2rem;
+    --size-article: 35rem;
+    --border-radius-img: 5.5rem;
+    --height-ban: 59rem;
+    --background-navbar: rgba(0, 0, 0, 0.3)
  }
 
- * {
-     margin: 0;
-     padding: 0;
- }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
- footer {
-     background: linear-gradient(165deg, var(--third-color), var(--fourth-color));
-     padding: 2rem;
-     display: flex;
-     flex-direction: column;
-     align-items: center;
-     justify-content: center;
+/* Footer */
+.footer {
+    background: linear-gradient(165deg, var(--background-color-5), var(--background-color-4), var(--background-color-3));
+    padding-block: 3rem;
+    color: var(--text-color);
+}
+.footerContainer {
+    width: 80%;
+    margin-inline: auto;
+}
 
-     p {
-         color: var(--sixth-color);
-     }
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+.footer-icone {
+    color: var(--background-color-1);
+    margin-right: 7px;
+    position: relative;
+    top: 5px;
+}
+.footer-title {
+    font-size: 20px;
+    margin-bottom: 16px;
+    color: var(--text-color);
+    font-family: var(--font-family-title);
+}
 
-     img {
-         width: 64px;
-     }
+.footer-p, .footer-ul {
+    color: var(--text-color);
+    font-family: var(--font-family);
+    font-size: 14px;
+    line-height: 1.8;
+    list-style: none;
+}
+.newsletter-form {
+    display: flex;
+    gap: 8px;
+    margin-top: 12px;
+}
+.newsletter input {
+    flex: 1;
+    padding: 8px 12px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    color: white;
+    font-size: 14px;
+}
+.newsletter input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+.newsletter input:focus {
+    outline: none;
+    border-color: var(--background-color-1)
+}
+.footer-btn-carrier {
+    padding: 8px 16px;
+    font-size: 14px;
+    border-radius: 2rem;
+    background: linear-gradient(90deg, var(--background-color-1),var(--background-color-2),var(--background-color-3));
+    color: var(--text-color);
+    font-weight: bold;
+}
+.footer-btn {
+    padding: 8px 16px;
+    font-size: 14px;
+    border-radius: 0.5rem;
+    background: linear-gradient(90deg, var(--background-color-1),var(--background-color-2),var(--background-color-3));
+    color: var(--text-color);
+    font-weight: bold;
+}
+.footer-btn-carrier:hover, .footer-btn:hover {
+    box-shadow: 0 0.1rem 1rem var(--background-color-1, 0.3);
+}
+.footer-bottom {
+    padding-top: 32px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 14px;
+}
 
-     ul {
-         display: flex;
-         align-items: center;
-         justify-content: center;
-         gap: 24px;
-         padding: 32px;
-
-         li {
-             background-color: rgb(255, 255, 255, 0.3);
-             border-radius: 15px;
-             display: flex;
-             font-size: 1.5rem;
-             height: 3rem;
-             width: 12rem;
-             justify-content: center;
-             align-items: center;
-
-             a {
-                 text-decoration: none;
-                 color: var(--sixth-color);
-             }
-
-         }
-     }
- }
-
-
- @media screen and (max-width: 768px) {
-     footer {
-         ul {
-             display: flex;
-             flex-direction: column;
-         }
-     }
- }
+@media screen and (max-width: 768px) {
+    .footer-grid {
+        display: flex;
+        flex-direction: column;
+    }
+}
