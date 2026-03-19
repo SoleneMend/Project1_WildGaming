@@ -13,7 +13,7 @@ for (const div of allDiv) {
     )
 }
 const imageElement = document.getElementById('headerImg');
-const images = ['./images/index-img1.jpg', './images/index-img2.jpg', './images/index-img3.jpg'];
+const images = ['./images/index-img1.jpg', './images/index-img2.jpg', './images/index-img3.jpg', './images/index-img4.png'];
 let index = 0;
 
 
