@@ -22,45 +22,6 @@ body {
     color : var(--text-color)
 }
 
-
-/*---------- Nav ----------*/
-
-nav {
-    height: 6rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    .logo {
-        width: 30%;
-        margin: 1rem;
-    }
-    .cat {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-    }
-    .navbar {
-        display: flex;
-        gap: 1rem;
-        margin-right: 2rem;
-    }
-    .nav {
-        border: 0.1875rem;
-        border-radius: 1rem;
-        background: rgba(217, 217, 217, 35%);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 0.5rem;
-    }
-    a {
-        text-decoration: none;
-        color: white;
-    }
-}
-
-
 @media screen and (max-width: 810px) {
     nav {
         height: 10rem;
@@ -130,6 +91,13 @@ header {
             border-radius: 10px;
             border: 2px solid white;
             padding : 5px;
+            transition: all 1s ease;
+
+            &:hover {
+                transform: scale(1.05);
+                background: rgba(255,255,255,0.40);
+                color: var(--purple-color);
+            }
         }
 
         .desc {
@@ -137,6 +105,13 @@ header {
             border: 2px solid white;
             border-radius: 10px;
             padding: 5px;
+            transition: all 1s ease;
+
+            &:hover {
+                transform: scale(1.05);
+                background: rgba(255,255,255,0.40);
+                color: var(--purple-color);
+            }
         }
 
         img {
@@ -145,6 +120,12 @@ header {
             border-radius: 20px;
             
             margin-right: 10vw;
+            transition: all 1s ease;
+
+            &:hover {
+                box-shadow: 5px 5px 5px rgb(150, 20, 103);
+                transform: scale(1.05);
+            }
         }
     }
 
@@ -164,6 +145,13 @@ header {
             border-radius: 10px;
             border: 2px solid white;
             padding : 5px;
+            transition: all 1s ease;
+
+            &:hover {
+                transform: scale(1.05);
+                background: rgba(255,255,255,0.40);
+                color: var(--purple-color);
+            }
         }
 
         .desc {
@@ -171,15 +159,22 @@ header {
             border: 2px solid white;
             border-radius: 10px;
             padding: 5px;
-        }
-        
-        .recommandation {
-            font-weight: bold;
-            a {
-                color : var(--light-blue-color);
-                text-decoration: none;
+            transition: all 1s ease;
+
+            .recommandation {
+                font-weight: bold;
+                a {
+                    text-decoration: none;
+                }
+            }
+
+            &:hover {
+                transform: scale(1.05);
+                background: rgba(255,255,255,0.40);
+                color: var(--purple-color);
             }
         }
+        
         
         img {
             height: 30vw;
@@ -188,6 +183,12 @@ header {
 
             margin-left: 10vw;
             margin-right: 5vw;
+            transition: all 1s ease;
+
+            &:hover {
+                box-shadow: 5px 5px 5px rgba(80, 7, 64, 0.5);
+                transform: scale(1.1);
+            }
         }
 
         button {
@@ -358,6 +359,13 @@ header {
             padding : 5px;
             font-size: 3vw;
             width: 15vw;
+            transition: all 1s ease;
+
+            &:hover {
+                transform: scale(1.05);
+                background: rgba(255,255,255,0.40);
+                color: var(--dark-blue-color);
+            }
         }
 
         .desc {
@@ -365,11 +373,24 @@ header {
             border: 2px solid white;
             border-radius: 10px;
             padding: 5px;
+            transition: all 1s ease;
+
+            &:hover {
+                transform: scale(1.05);
+                background: rgba(255,255,255,0.40);
+                color: var(--dark-blue-color);
+            }
         }
 
         img {
             height: auto;
             border-radius: 20px;
+            transition: all 1s ease;
+
+            &:hover {
+                box-shadow: 5px 5px 5px rgb(97, 9, 100);
+                transform: scale(1.05);
+            }
         }
     }
 
@@ -392,6 +413,13 @@ header {
             border: 2px solid white;
             padding : 5px;
             font-size: 2vw;
+            transition: all 1s ease;
+
+            &:hover {
+                transform: scale(1.05);
+                background: rgba(255,255,255,0.40);
+                color: var(--dark-blue-color);
+            }
         }
 
         .desc {
@@ -399,15 +427,22 @@ header {
             border: 2px solid white;
             border-radius: 10px;
             padding: 5px;
-        }
-        
-        .recommandation {
-            font-weight: bold;
-            a {
-                color : var(--light-blue-color);
-                text-decoration: none;
+            transition: all 1s ease;
+
+            .recommandation {
+                font-weight: bold;
+                a {
+                    text-decoration: none;
+                }
+            }
+
+            &:hover {
+                transform: scale(1.05);
+                background: rgba(255,255,255,0.40);
+                color: var(--dark-blue-color);
             }
         }
+        
         
         img {
             height: 30vw;
@@ -416,6 +451,12 @@ header {
 
             margin-left: 10vw;
             margin-right: 5vw;
+            transition: all 1s ease;
+
+            &:hover {
+                box-shadow: 5px 5px 5px rgba(57, 10, 107, 0.5);
+                transform: scale(1.1);
+            }
         }
 
         button {
@@ -562,58 +603,3 @@ header {
         }
     }
 }
-
-
-/*---------- Footer ----------*/
-
-footer {
-        background: var(--background-color);
-        padding: 1rem;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-
-        p {
-            color: var(--text-color);
-        }
-
-        img {
-            width: 64px;
-        }
-
-        ul {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 24px;
-            padding: 32px;
-
-            li {
-                background-color: rgb(255, 255, 255, 0.3);
-                border-radius: 15px;
-                display: flex;
-                font-size: 1.5rem;
-                height: 3rem;
-                width: 12rem;
-                justify-content: center;
-                align-items: center;
-
-                a {
-                    text-decoration: none;
-                    color: var(--text-color);
-                }
-
-            }
-        }
-    }
-
-
-    @media screen and (max-width: 768px) {
-        footer {
-            ul {
-                display: flex;
-                flex-direction: column;
-            }
-        }
-    }

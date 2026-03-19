@@ -18,12 +18,6 @@
     --background-navbar: rgba(0, 0, 0, 0.3)
  }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 /* Footer */
 .footer {
     background: linear-gradient(165deg, var(--background-color-5), var(--background-color-4), var(--background-color-3));

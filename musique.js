@@ -27,7 +27,7 @@ for (let i = 0; i < listMusicPresentation.length; i++) {
     let articleMusique = document.createElement('article');
     articleMusique.classList.add("musique-presentation");
     articleMusique.onmouseenter = function() {clearInterval(autoIntervalMusique); autoIntervalMusique = null;};
-    articleMusique.onmouseleave = function() {startAutoMusique()}; 
+    articleMusique.onmouseleave = function() {if(!autoIntervalMusique) {startAutoMusique()}}; 
     sectionMusic.append(articleMusique);
 
     // Create button prev
@@ -105,12 +105,14 @@ for (let i = 1; i < allMusiqueArticles.length; i++) {
 // Changement Automatique
 
 let autoIntervalMusique;
+
 function startAutoMusique() {
+    if (autoIntervalMusique) return;
+
     autoIntervalMusique = setInterval( () => {
         nextMusique();
     }, 3000);
 }
-
 startAutoMusique();
 
 function nextMusique() {

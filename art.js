@@ -20,8 +20,8 @@ for (let i = 0; i < listArtPresentation.length; i++) {
     //Create the base
     let articleArt = document.createElement('article');
     articleArt.classList.add("dessin-presentation");
-    articleArt.onmouseenter = function() {clearInterval(autoIntervalArt); autoIntervalMusique = null;};
-    articleArt.onmouseleave = function() {startAutoArt()};
+    articleArt.onmouseenter = function() {clearInterval(autoIntervalArt); autoIntervalArt = null;};
+    articleArt.onmouseleave = function() {if(!autoIntervalArt) {startAutoArt()}};
 
     // Create button
     let prevButton = document.createElement('button');
@@ -104,6 +104,8 @@ for (let i = 1; i < allArticle.length; i++) {
 let autoIntervalArt;
 
 function startAutoArt() {
+    if (autoIntervalArt) return;
+
     autoIntervalArt = setInterval( () => {
         next();
     }, 3000);
