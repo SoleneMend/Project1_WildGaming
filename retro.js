@@ -1,3 +1,4 @@
+// premiere image 
 const slide = document.querySelector(".slide");
 const computer = document.querySelectorAll(".computer");
 let index = 0;
@@ -12,6 +13,7 @@ setInterval(function() {
     slide.style.transform = 'translateX(-' + (index * 517) + 'px)';
 }, 5000);
 
+// deuxieme image 
 const images = ["./images/retroConsole2.png.webp", "./images/retroconsole3.jpg", "./images/retroconsole.webp"];
 let i = 0;
 const duree = 2000;
@@ -34,3 +36,25 @@ setTimeout(function() {
 }
 
 setInterval(changeSlide, duree + fondu);
+
+// image en bas
+document.querySelectorAll(".first img").forEach(image => {
+    image.onclick = () =>{
+        document.querySelector(".popupImage").style.display = "block";
+        document.querySelector(".popupImage img").src = image.getAttribute("src");
+    }
+})
+document.querySelectorAll(".second img").forEach(image => {
+    image.onclick = () =>{
+        document.querySelector(".popupImage").style.display = "block";
+        document.querySelector(".popupImage img").src = image.getAttribute("src");
+    }
+})
+document.querySelector(".popupImage .time").onclick = () =>{
+     document.querySelector(".popupImage").style.display = "none";
+}
+document.querySelector(".popupImage").onclick = (e) => {
+    if (e.target === e.currentTarget) {
+        e.currentTarget.style.display = "none";
+    }
+}

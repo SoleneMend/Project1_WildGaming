@@ -16,7 +16,7 @@ document.getElementById('navbar').innerHTML =
 
             <!-- Menu Navigation et de connexion-->
             <ul class="dropdown">
-                <li class="dropdown-categorie"><a class="dropdown-accueil" href="#actualites">Les actualités</a>
+                <li class="dropdown-categorie"><a class="dropdown-accueil" id="actu" href="#actualites">Les actualités</a>
                     <ul class="submenu">
                         <li class="submenuList"><a class="navList" href="discovery.html">Découvrir le jeu-vidéo</a></li>
                         <li class="submenuList"><a class="navList" href="genres.html">Les catégories de jeu</a></li>
@@ -26,7 +26,7 @@ document.getElementById('navbar').innerHTML =
                         <li class="submenuList"><a class="navList" href="#">Les technologies</a></li>
                     </ul>
                 </li>
-                <li class="dropdown-categorie"><a class="dropdown-accueil" href="#recommandations">Nos recommandations</a>
+                <li class="dropdown-categorie"><a class="dropdown-accueil" id="reco" href="#recommandations">Nos recommandations</a>
                     <ul class="submenu">
                         <li class="submenuList"><a class="navList" href="https://store.steampowered.com/?l=french" target="_blank" rel="noopener noreferrer">Steam</a></li>
                         <li class="submenuList"><a class="navList" href="https://www.epicgames.com/site/fr/home" target="_blank" rel="noopener noreferrer">Epicgames</a></li>
@@ -38,3 +38,35 @@ document.getElementById('navbar').innerHTML =
             </ul>
         </div>
     </nav>`
+
+// mediaquery modification du menu
+
+const actuality = document.getElementById('actu');
+const recommendations = document.getElementById('reco')
+
+
+function updateActuality() {
+    if (window.innerWidth <= 768) {
+        actuality.innerText = 'Actu'; // texte mobile
+    } else {
+        actuality.innerText = 'Les actualités'; // texte desktop
+    }
+}
+
+// Au chargement
+updateActuality();
+
+// Au redimensionnement de la fenêtre
+window.addEventListener('resize', updateActuality);
+
+function updateRecommendation() {
+    if (window.innerWidth <= 768) {
+        recommendations.innerText = 'Reco';
+    } else {
+        recommendations.innerText = 'Nos Recommandations';
+    }
+}
+
+updateRecommendation();
+
+window.addEventListener('resize', updateRecommendation)

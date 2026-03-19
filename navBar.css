@@ -146,3 +146,20 @@
 .navConnexion:hover {
     background: var(--background-color-1);
 }
+
+@media screen and (max-width: 768px){
+    .nav-container{
+        padding: 0.5rem;
+    }
+    .navTitle {
+        display: none;
+    }
+    .submenu {
+        min-width: 10rem;
+    }
+
+
+
+
+
+}

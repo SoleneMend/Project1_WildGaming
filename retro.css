@@ -4,6 +4,7 @@
         --background-color-3: #3a0ca3;
         --font-family: Arial, Helvetica, sans-serif;
         --font-color: white;
+        --border-color: white;
         --font-size-title: 2rem;
         --background-article: rgba(217, 217, 217, 35%);
         --size-article: 35rem;
@@ -84,7 +85,7 @@ body {
     color: var(--font-color);
 }
 .inter {
-    height: 3rem;
+    height: 5rem;
 }
 .retarcade {
     display: flex;
@@ -117,15 +118,15 @@ body {
     background: var(--background-article);
 }
 .sliderRetro {
-    width: 500px;
-    height: 281px;
+    width: 31.25rem;
+    height: 17.5625rem;
     border-radius: var(--border-radius-img);
     overflow: hidden;
     position: relative;
 }
 .consoleBefore, .consoleAfter {
-    width: 500px;
-    height: 281px;
+    width: 31.25rem;
+    height: 17.5625rem;
     object-fit: cover;
     position: absolute;
     transition: opacity 1000ms ease;
@@ -140,20 +141,123 @@ body {
     z-index: 1;
 }
 .retimages {
-    display: flex;
-    justify-content: space-around;
-    flex-direction: column;
-    height: var(--size-article);
+    position: relative;
+    min-height: var(--size-article);
     background: var(--background-article);
-}
-.game {
-    width: 12%;
 }
 .first {
     display: flex;
-    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    padding: 10px;
 }
 .second {
     display: flex;
-    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    padding: 10px;
 }
+.imageGame {
+    height: 15rem;
+    width: 21rem;
+    border:  0.5rem solid var(--border-color);
+    box-shadow: 0 5px 1rem rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    cursor: pointer;
+}
+.game {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: 0.2s linear;
+}
+.game:hover {
+    transform: scale(1.1);
+}
+.popupImage {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.9);
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+    display: none;
+}
+.time {
+    position: absolute;
+    top: 0;
+    right: 1rem;
+    font-size: 4rem;
+    font-weight: bolder;
+    color: var(--font-color);
+    cursor: pointer;
+    z-index: 100;
+}
+.imagePop {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 5px solid var(--font-color);
+    border-radius: 5px;
+    width: 750px;
+    object-fit: cover;
+}
+
+@media screen and (max-width:768px) {
+    
+    .triangle {
+        width: 55%;
+        top: 20vw;
+    }
+    .sun {
+        width: 65%;
+        top: 20vw;
+    }
+    .neonGrid {
+        top: 32vw;
+    }
+    .retro {
+        position: relative;
+        top: -36rem;
+        flex-direction: column-reverse;
+        height: 65rem;
+    }
+    .retDescription {
+        width: 20rem;
+        align-items: center;
+    }
+    .slideRetro {
+        width: 90%;
+    }
+    .retarcade {
+        position: relative;
+        top: -36rem;
+        flex-direction: column;
+    }
+    .retconsole {
+        flex-direction: column-reverse;
+        min-height: var(--size-article);
+        height: 45rem;
+        position: relative;
+        top: -36rem;
+    }
+    .sliderRetro, .consoleBefore, .consoleAfter {
+        width: 22.25rem;
+    }
+    .retimages {
+        position: relative;
+        top: -36rem;
+        height: 90rem;
+    }
+    .titleRetro {
+        padding: 2rem;
+    }
+    .imagePop {
+        width: 95%;
+    }
+}
+
