@@ -5,7 +5,7 @@
 
 <!-- Version en Francais -->
 <details>
-<summary>🇬🇧 English version</summary>
+<summary> 🇬🇧 English version</summary>
 
 ### <u>Summary</u> : 
 <a href="#Description"> Description and Organization</a> <br>
