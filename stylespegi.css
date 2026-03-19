@@ -11,12 +11,32 @@
     padding: 0;
     box-sizing: border-box;
 }
+.black{
+    body{
+        background-color: black;
+    }
+    
 
+}
 body {
     background: linear-gradient(135deg, #b5179e, #7209b7, #3a0ca3);
     font-family: Arial, sans-serif;
     color: white;
 }
+
+section button{
+    font-size: 10px;
+    background: rgba(255, 254, 254, 0.35);
+    border-radius: 1rem;
+    padding: 1rem 1.5rem;
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: flex-start;  
+}
+
+
+
+
 
 
 nav {

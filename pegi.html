@@ -25,6 +25,9 @@
     
 
     <section>
+        
+        <button id="button" onclick="dark()"
+         >Mode nuit&#128161</button>
         <h1>TRANCHES D'AGE PEGI</h1>
     </section>
 
@@ -36,14 +39,14 @@
             <h2>PEGI  comment choisir un jeu vidéo adapté à votre enfant ?</h2>
 
             <article>
-                <p>Le système PEGI (Pan European Game Information) est un outil précieux
+                <p> Le système PEGI (Pan European Game Information) est un outil précieux
                 pour aider les parents à choisir des jeux vidéo adaptés à l'âge de leurs enfants. Chaque jeu est classifié selon une tranche d'âge — 3, 7, 12, 16 ou 18 ans</p>
             </article>
         </div>
     </section>
     <section>
      <h3>TOP  JEUX PEGI</h3>
-        <div class="toppegi"> 
+        <div class="toppegi" data-pegi="3" > 
             <img src="images/PEgi3.webp" alt="starwas picture">
             <p>TITRE:Lego Star Wars Skywalker<br><br>! Jouez dans l’univers des neuf films de la saga Star Wars avec un tout nouveau jeu vidéo LEGO
                 qui ne ressemble à aucun autre. Vivez des aventures passionnantes et drôles et 
@@ -51,26 +54,26 @@
             <img src="images/sectif3.png" alt="pegi3">
         </div>
 
-         <div class="toppegi"> 
+         <div class="toppegi" data-pegi="7"> 
             <img src="images/Need.avif" alt="car">
             <p>TITRE:Need For Speed Hot Pursuit<br><br>Laissez-vous envahir par une incroyable sensation de vitesse dans la peau d'un criminel ou 
                 d'un flic au volant des voitures les plus performantes du monde.</p>
              <img src="images/pegi7.png" alt="pegi7">
         </div>
         
-         <div class="toppegi"> 
+         <div class="toppegi" data-pegi="12"> 
              <img src="images/sims12.webp" alt="sims2">
             <p>TITRE:Les Sims 2<br><br>A vous de construire le monde qui les entoure et de fonder votre famille, trouver un travail, vous faire des relations, trouver un hobby... bref, vivre !</p>
             <img src="images/sectif12.png" alt="pegi12">
         </div>
 
-         <div class="toppegi"> 
+         <div class="toppegi" data-pegi="16"> 
             <img src="images/ASSPEGI16.webp" alt="ASS12">
             <p>TITRE:assassin's creed black flag<br><br>Assassin’s Creed IV Black Flag est un jeu vidéo d'action-aventure et d'infiltration développé par Ubisoft Montréal et édité par la soci</p>
             <img src="images/pegi16.png" alt="pegi16">
         </div>
 
-         <div class="toppegi"> 
+         <div class="toppegi" data-pegi="18"> 
             <img src="images/Grand_Theft_Auto_V.png" alt="GTA5">
             <p>TITRE:Grand Theft Auto V<br><br>Grand Theft Auto V GTA V est un jeu d’action-aventure en monde ouvert développé par Rockstar Games et sorti en 2013. L’histoire se déroule dans la ville fictive de Los Santos, inspirée de Los Angeles,
                  où le joueur incarne trois criminels : Michael, Franklin et Trevor.</p>
@@ -96,5 +99,5 @@
         </ul>
        
     </footer>
-    
+    <script src="pegi.js"></script>
 </body>
