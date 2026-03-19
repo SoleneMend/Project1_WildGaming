@@ -1,0 +1,42 @@
+const linkFooter = document.createElement('link');
+linkFooter.rel = 'stylesheet';
+linkFooter.href = 'footer.css';
+document.head.appendChild(linkFooter);
+
+
+document.getElementById('footer').innerHTML =
+`<footer class="footer">
+    <div class="footerContainer">
+        <div class="footer-grid">
+            <div class="footer-column">
+                <h3 class="footer-title"><svg class="footer-icone" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-circle-alert-icon lucide-circle-alert"><circle cx="12" cy="12" r="10"/><line x1="12" x2="12" y1="8" y2="12"/><line x1="12" x2="12.01" y1="16" y2="16"/></svg>About Us</h3>
+                <p class="footer-p">Piou Piou Gaming est votre source d'information privilégiée pour tout ce qui concerne le monde du jeu vidéo.</p>
+            </div>
+            <div class="footer-column">
+                <h3 class="footer-title"><svg class="footer-icone" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mail-icon lucide-mail"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg>Nous contacter</h3>
+                <ul class="footer-ul">
+                    <li>Email: contact@pioupougaming.fr</li>
+                    <li>Téléphone: +33 1 23 45 67 89</li>
+                    <li>Adresse: 123 Rue du Gaming, Paris</li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3 class="footer-title"><svg class="footer-icone" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-briefcase-icon lucide-briefcase"><path d="M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/><rect width="20" height="14" x="2" y="6" rx="2"/></svg>Postuler</h3>
+                <p class="footer-p">Rejoignez notre équipe passionnée !</p>
+                <button class="footer-btn-carrier">Voir les offres</button>
+            </div>
+            <div class="footer-column">
+                <h3 class="footer-title"><svg class="footer-icone" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-send-icon lucide-send"><path d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z"/><path d="m21.854 2.147-10.94 10.939"/></svg>Newsletter</h3>
+                <p class="footer-p">Restez informé des dernières actualités gaming</p>
+                <div class="newsletter">
+                    <input type="email" placeholder="Votre email">
+                    <button class="footer-btn">OK</button>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 Piou Piou Gaming. Tous droits réservés.</p>
+        </div>
+    </div>
+</footer>
+`
