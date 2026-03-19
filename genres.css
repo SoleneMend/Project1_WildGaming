@@ -56,58 +56,6 @@ body {
     background: linear-gradient(165deg, var(--segondary-color), var(--third-color));
 }
 
-nav {
-    background: linear-gradient(var(--primary-color), var(--segondary-color));
-
-    div {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 24px;
-        padding: 24px;
-
-        img {
-            width: 64px;
-            animation-name: turn;
-            animation-duration: 7s;
-            animation-timing-function: ease-in-out;
-            animation-iteration-count: infinite;
-        }
-
-        h1 {
-            color: var(--sixth-color);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-    }
-
-    ul {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 24px;
-        padding: 32px;
-
-        li {
-            background-color: rgb(255, 255, 255, 0.3);
-            border-radius: 15px;
-            display: flex;
-            font-size: 2rem;
-            height: 3rem;
-            width: 14rem;
-            justify-content: center;
-            align-items: center;
-
-
-            a {
-                text-decoration: none;
-                color: var(--sixth-color);
-            }
-        }
-    }
-}
-
 header {
     display: flex;
     align-items: center;
@@ -231,7 +179,6 @@ main {
     }
 }
 
-
 @keyframes moveLight {
     0% {
         stroke-dashoffset: var(--total-length);
@@ -242,94 +189,7 @@ main {
     }
 }
 
-@keyframes turn {
-    0% {
-        transform: translate(0px, 0px);
-    }
-
-    20% {
-        transform: translate(680%, 200%) rotate(90deg);
-    }
-
-    25% {
-        transform: translate(680%, 200%) rotate(0deg);
-    }
-
-    30% {
-        transform: translate(680%, 200%) rotate(90deg);
-    }
-
-    45% {
-        transform: translate(680%, 0px) rotate(0deg);
-    }
-
-    50% {
-        transform: translate(680%, 0px) rotate(90deg);
-    }
-
-    55% {
-        transform: translate(680%, 0px) rotate(0deg);
-    }
-
-    70% {
-        transform: translate(0px, 200%) rotate(90deg);
-    }
-
-    75% {
-        transform: translate(0px, 200%) rotate(0deg);
-    }
-
-    80% {
-        transform: translate(0px, 200%) rotate(90deg);
-    }
-
-    90% {
-        transform: translate(0px, 0px) rotate(0deg);
-    }
-
-    95% {
-        transform: translate(0px, 0px) rotate(90deg);
-    }
-
-    100% {
-        transform: translate(0px, 0px) rotate(0deg);
-    }
-}
-
 @media screen and (max-width: 768px) {
-    @keyframes turn {
-        0% {
-            transform: translate(0px, 0px);
-        }
-
-        25% {
-            transform: translate(0px, 0px) rotate(90deg);
-        }
-
-        50% {
-            transform: translate(0px, 0px) rotate(0deg);
-        }
-
-        75% {
-            transform: translate(0px, 0px) rotate(90deg);
-        }
-
-        100% {
-            transform: translate(0px, 0px) rotate(0deg);
-        }
-    }
-
-    nav {
-        div {
-            flex-direction: column;
-
-        }
-
-        ul {
-            display: flex;
-            flex-direction: column;
-        }
-    }
 
     main {
         section {
