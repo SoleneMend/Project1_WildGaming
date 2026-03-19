@@ -23,5 +23,5 @@ setInterval(() => {
         index = (index + 1) % images.length;
         imageElement.src = images[index];
         imageElement.classList.remove('hidden');
-    }, 1000);
+    }, 750);
 }, 6000);
