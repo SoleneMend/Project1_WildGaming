@@ -4,11 +4,11 @@ const listMusicPresentation =
 [
     { title : "The Witcher 3", url : "https://youtu.be/uqp4Jc-XkCw?si=kf6wVtNzQW_AxQLO", urlImg : "images/art-presentation-musique/art-presentation-witcher3-logo.jpg",recomandationFrom : listUs[0], description : "" },
     { title : "Clair Obscur", url : "https://youtu.be/xnzs5eOXqs0?si=rX5c1kPcqsmFMzlH", urlImg : "images/art-presentation-musique/art-presentation-clairObscur-logo.jpg",recomandationFrom : listUs[1], description : "" },
-    { title : "Doom", url : "https://youtu.be/BSsfjHCFosw?si=b8uhpmlXbNiHuQG3", urlImg : "images/art-presentation-musique/art-presentation-doom-logo.webp",recomandationFrom : listUs[1], description : "" },
+    { title : "Doom", url : "https://youtu.be/BSsfjHCFosw?si=b8uhpmlXbNiHuQG3", urlImg : "images/art-presentation-musique/art-presentation-doom-logo.png",recomandationFrom : listUs[1], description : "" },
     { title : "Pokemon : Diamond/ Pearl", url : "https://youtu.be/rXefFHRgyE0?si=KE5kPUvtooAmIGON", urlImg : "images/art-presentation-musique/art-presentation-pokemon-logo.png",recomandationFrom : listUs[1], description : "" },
     { title : "Skyrim", url : "https://youtu.be/UsnRQJxanVM?si=lLHYmN3Tj-yXqL_j", urlImg : "images/art-presentation-musique/art-presentation-skyrim-logo.jpg",recomandationFrom : listUs[0], description : "" },
     { title : "Minecraft", url : "https://youtu.be/Gpd85y_iTxY?si=LV1kwaCxtIBwxBHr", urlImg : "images/art-presentation-musique/art-presentation-minecraft-logo.jpg",recomandationFrom : listUs[1], description : "" },
-    { title : "Undertale", url : "https://youtu.be/NH-GAwLAO30?si=KscJCVzNI0TiQn_r", urlImg : "images/art-presentation-musique/art-presentation-undertale-logo.jpg",recomandationFrom : listUs[1], description : "" },
+    { title : "Undertale", url : "https://youtu.be/NH-GAwLAO30?si=KscJCVzNI0TiQn_r", urlImg : "images/art-presentation-musique/art-presentation-undertale-logo.png",recomandationFrom : listUs[1], description : "" },
     { title : "Final Fantasy VII", url : "https://youtu.be/mYdf0yqK_Fc?si=Guf-8aWvdFuGJ2z2", urlImg : "images/art-presentation-musique/art-presentation-finalfantasyVII-logo.jpg",recomandationFrom : listUs[0], description : "" },
     { title : "Cyberpunk 2077 (dlc)", url : "https://youtu.be/u15tEo0wsQI?si=vJ_27CzE-FghsDOs", urlImg : "images/art-presentation-musique/art-presentation-cyberpunk2077-logo.jpg",recomandationFrom : listUs[2], description : "" },
     { title : "Uncharted 1", url : "https://youtu.be/Z0PufLvQCRo?si=P7P2ZcW2k2N3qvk4", urlImg : "images/art-presentation-musique/art-presentation-uncharted-logo.png",recomandationFrom : listUs[2], description : "" },
@@ -23,10 +23,11 @@ let sectionMusic = document.querySelector(".art-musique");
 
 for (let i = 0; i < listMusicPresentation.length; i++) {
     
-    console.log(i)
     // Create the base
     let articleMusique = document.createElement('article');
     articleMusique.classList.add("musique-presentation");
+    articleMusique.onmouseenter = function() {clearInterval(autoIntervalMusique); autoIntervalMusique = null;};
+    articleMusique.onmouseleave = function() {startAutoMusique()}; 
     sectionMusic.append(articleMusique);
 
     // Create button prev
@@ -101,7 +102,17 @@ for (let i = 1; i < allMusiqueArticles.length; i++) {
     allMusiqueArticles[i].style.display = 'none';
 }
 
-// Next button
+// Changement Automatique
+
+let autoIntervalMusique;
+function startAutoMusique() {
+    autoIntervalMusique = setInterval( () => {
+        nextMusique();
+    }, 3000);
+}
+
+startAutoMusique();
+
 function nextMusique() {
     allMusiqueArticles[activeMusiquePresentation].style.display = 'none';
     activeMusiquePresentation++;
@@ -109,14 +120,19 @@ function nextMusique() {
         activeMusiquePresentation = 0;
     }
     allMusiqueArticles[activeMusiquePresentation].style.display = 'flex';
+    clearInterval(autoIntervalMusique);
+    autoIntervalMusique = null;
+    startAutoMusique();
 }
 
-// prev button
-function prevMusique() {
+function prevMusique() {    
     allMusiqueArticles[activeMusiquePresentation].style.display = 'none';
     activeMusiquePresentation--;
     if (activeMusiquePresentation < 0) {
         activeMusiquePresentation = allMusiqueArticles.length - 1;
     }
-    allMusiqueArticles[activeMusiquePresentation].style.display = 'flex'
+    allMusiqueArticles[activeMusiquePresentation].style.display = 'flex';
+    clearInterval(autoIntervalMusique);
+    autoIntervalMusique = null;
+    startAutoMusique();
 }
