@@ -3,7 +3,7 @@ const body = document.querySelector("body")
 
 function dark() { 
     if (body.style.background === "black") {
-        body.style.background = "#f72585" }
+        body.style.background = "linear-gradient(135deg, #b5179e, #7209b7, #3a0ca3)" }
     else{
         body.style.background = "black" 
     }
