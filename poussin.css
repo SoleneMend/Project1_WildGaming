@@ -18,106 +18,14 @@ body {
     margin: 0;
     height: 100vh;
     overflow: hidden;
-}
-
-nav {
-    background: linear-gradient(var(--primary-color), var(--segondary-color));
-
-    div {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 24px;
-        padding: 24px;
-
-        img {
-            width: 64px;
-            animation-name: turn;
-            animation-duration: 7s;
-            animation-timing-function: ease-in-out;
-            animation-iteration-count: infinite;
-        }
-
-        h1 {
-            color: var(--sixth-color);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-    }
-
-    ul {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 24px;
-        padding: 32px;
-
-        li {
-            background-color: rgb(255, 255, 255, 0.3);
-            border-radius: 15px;
-            display: flex;
-            font-size: 2rem;
-            height: 3rem;
-            width: 14rem;
-            justify-content: center;
-            align-items: center;
-
-
-            a {
-                text-decoration: none;
-                color: var(--sixth-color);
-            }
-        }
-    }
+    background: linear-gradient(165deg, var(--primary-color), var(--third-color));
 }
 
 main {
-    height: 70vh;
-    background: linear-gradient(165deg, var(--segondary-color), var(--third-color));
+    height: 80vh;
 }
 
-footer {
-    background: linear-gradient(165deg, var(--third-color), var(--fourth-color));
-    padding: 2rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
 
-    p {
-        color: var(--sixth-color);
-    }
-
-    img {
-        width: 64px;
-    }
-
-    ul {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 24px;
-        padding: 32px;
-
-        li {
-            background-color: rgb(255, 255, 255, 0.3);
-            border-radius: 15px;
-            display: flex;
-            font-size: 2rem;
-            height: 3rem;
-            width: 12rem;
-            justify-content: center;
-            align-items: center;
-
-            a {
-                text-decoration: none;
-                color: var(--sixth-color);
-            }
-
-        }
-    }
-}
 
 @keyframes zoomSpam {
     from {
