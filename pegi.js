@@ -3,7 +3,7 @@ const body = document.querySelector("body")
 
 function dark() { 
     if (body.style.background === "black") {
-        body.style.background = "purple" }
+        body.style.background = "#f72585" }
     else{
         body.style.background = "black" 
     }
@@ -18,11 +18,11 @@ button.addEventListener('click', () => {
 const toppegi = document.querySelectorAll(".toppegi");
 
 const color = {
-    "3" :"green",
-    "7": "yellow",
+    "3" :"#70CF27",
+    "7": "#D4B52A",
     "12": "orange",
-    "16": "pink",
-    "18": "red",
+    "16": "#CF4730",
+    "18": "#CF2727",
 }
 
 
@@ -37,7 +37,7 @@ toppegi.forEach((toppeg) => {
     toppeg.addEventListener("mouseleave", () => {
         setTimeout(() => {
         toppeg.style.background = "";
-        }, 500);
+        }, 0);
 
     })
 
