@@ -11,54 +11,34 @@
     padding: 0;
     box-sizing: border-box;
 }
+.black{
+    body{
+        background-color: black;
+    }
+    
 
+}
 body {
     background: linear-gradient(135deg, #b5179e, #7209b7, #3a0ca3);
     font-family: Arial, sans-serif;
     color: white;
 }
 
-
-nav {
-    min-height: 8rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 3rem;
-    padding: 1rem 2rem;
-}
-
-.catty {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.logo {
-    width: 120px;
-    margin: 0;
-}
-
-.cat {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.navbar {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 2rem;
-}
-
-.nav {
-    background: rgba(217, 217, 217, 0.35);
+section button{
+    font-size: 10px;
+    background: rgba(255, 254, 254, 0.35);
     border-radius: 1rem;
     padding: 1rem 1.5rem;
     font-size: 1.2rem;
+    display: flex;
+    justify-content: flex-start;
+    position: relative; 
+    top: 10rem;
 }
+
+
+
+
 
 a {
     text-decoration: none;
@@ -97,7 +77,7 @@ h1 {
     margin-bottom: 10px;
 }
 
-h3 {
+.h3pegi {
     text-align: center;
     color: white;
     font-size: 30px;
@@ -144,42 +124,7 @@ h3 {
 }
 
 
-footer {
-    background: linear-gradient(165deg, var(--third-color), var(--fourth-color));
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 2rem 1rem;
-    margin-top: 2rem;
-}
 
-footer ul {
-    list-style: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 24px;
-}
-
-footer img {
-    width: 64px;
-}
-
-footer li {
-    background-color: rgba(255, 255, 255, 0.3);
-    border-radius: 15px;
-    display: flex;
-    font-size: 1.2rem;
-    height: 3rem;
-    width: 12rem;
-    justify-content: center;
-    align-items: center;
-}
-
-footer li a {
-    text-decoration: none;
-    color: white;
-}
 
 
 @media screen and (max-width: 810px) {
@@ -188,36 +133,7 @@ footer li a {
         padding: 0.5rem 0 1rem;
     }
 
-    nav {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 1.5rem;
-        padding: 1.5rem 1rem;
-    }
-
-    .logo {
-        width: 100px;
-    }
-
-    .navbar {
-        flex-direction: column;
-        gap: 1rem;
-    }
-
-    .nav {
-        font-size: 1rem;
-        width: 220px;
-        text-align: center;
-    }
-
-    .cat,
-    .catty {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
+    
 
     .toppegi {
         flex-direction: column;
@@ -230,9 +146,12 @@ footer li a {
         height: auto;
     }
 
-    footer ul {
-        flex-direction: column;
-    }
+
+
+    
+    
+
+    
 }
 
 @media screen and (max-width: 500px) {
@@ -249,4 +168,14 @@ footer li a {
     .toppegi p {
         font-size: 16px;
     }
+
+    section button{
+        font-size: 10px;
+        top: 6rem;
+        padding: 10px;
+    }
+
+
+
+
 }
