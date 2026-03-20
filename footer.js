@@ -1,4 +1,11 @@
-<footer class="footer">
+const linkFooter = document.createElement('link');
+linkFooter.rel = 'stylesheet';
+linkFooter.href = 'footer.css';
+document.head.appendChild(linkFooter);
+
+
+document.getElementById('footer').innerHTML =
+    `<footer class="footer">
     <div class="footerContainer">
         <div class="footer-grid">
             <div class="footer-column">
@@ -32,3 +39,4 @@
         </div>
     </div>
 </footer>
+`
