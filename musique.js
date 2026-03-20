@@ -13,7 +13,8 @@ const listMusicPresentation =
     { title : "Cyberpunk 2077 (dlc)", url : "https://youtu.be/u15tEo0wsQI?si=vJ_27CzE-FghsDOs", urlImg : "images/art-presentation-musique/art-presentation-cyberpunk2077-logo.jpg",recomandationFrom : listUs[2], description : "" },
     { title : "Uncharted 1", url : "https://youtu.be/Z0PufLvQCRo?si=P7P2ZcW2k2N3qvk4", urlImg : "images/art-presentation-musique/art-presentation-uncharted-logo.png",recomandationFrom : listUs[2], description : "" },
     { title : "Need for speed", url : "https://youtu.be/DoJQfzxu9r8?si=_Y2yhpIly_UguZIi", urlImg : "images/art-presentation-musique/art-presentation-needForSpeed-logo.png",recomandationFrom : listUs[3], description : "" },
-    { title : "Hollow Knight", url : "https://youtu.be/fWquuWkHVP4?si=nR_Qo4IRszkGftA9", urlImg : "images/art-presentation-musique/art-presentation-hollowKnight-logo.webp", recomandationFrom : "", description : "petit bonus : https://youtu.be/Mq8E_1LkoAc?si=_comOt5DWRJr8u_B ... Soluta nemo tenetur repudiandae possimus consectetur facere dignissimos sunt totam unde, numquam neque assumenda excepturi ducimus aperiam odit" },
+    { title : "Hollow Knight", url : "https://youtu.be/fWquuWkHVP4?si=nR_Qo4IRszkGftA9", urlImg : "images/art-presentation-musique/art-presentation-hollowKnight-logo.webp", recomandationFrom : listUs[1], description : "petit bonus : https://youtu.be/Mq8E_1LkoAc?si=_comOt5DWRJr8u_B ... Soluta nemo tenetur repudiandae possimus consectetur facere dignissimos sunt totam unde, numquam neque assumenda excepturi ducimus aperiam odit" },
+    { title : "Slime Rancher", url : "https://youtu.be/bmCj0UNiflg?si=MMXiNWKDhbSeAWtU", urlImg : "images/art-presentation-musique/art-presentation-slimeRancher-logo.png", recomandationFrom : listUs[1], description : "" },
     //{ title : "", url : "", urlImg : "images/art-presentation-musique/", recomandationFrom : "", description : "" },
 ]
 
